@@ -1,0 +1,28 @@
+.wrapper {
+  margin: 10px;
+  padding: 30px;
+  width: 800px;
+  height: 800px;
+  border: 1px solid pink;
+}
+.item {
+  position: relative;
+  padding: 20px;
+  border: 2px solid blueviolet;
+}
+.item:after {
+  position: absolute;
+  /* 이부분을 기준으로  */
+}
+.item:hover:after {
+  content: "Modal on!";
+}
+item.open:after {
+  content: "Modal off!";
+}
+.context {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  border: 3px solid slateblue;
+}
