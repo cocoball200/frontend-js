@@ -12,17 +12,31 @@
 }
 .item:after {
   position: absolute;
+  margin-left: 20px;
   /* 이부분을 기준으로  */
 }
 .item:hover:after {
-  content: "Modal on!";
+  content: "Guess and Click!";
 }
-item.open:after {
-  content: "Modal off!";
+.item.open:after {
+  content: "x";
+}
+.item img {
+  width: 100px;
+  height: 100px;
 }
 .context {
   display: none;
   position: absolute;
+  padding: 15px;
+  top: 0;
+  left: 200px;
+  width: 60%;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.3);
   z-index: 5;
-  border: 3px solid slateblue;
+}
+
+.item.open .context {
+  display: block;
 }

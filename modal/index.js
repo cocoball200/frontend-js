@@ -22,10 +22,8 @@ const items = document.querySelectorAll(".item");
 
 document.body.addEventListener("click", function (e) {
   const targetClassList = e.target.classList;
-  console.log(targetClassList);
   if (targetClassList.contains("context")) return;
-  //display: block일때 return
-  if (targetClassList.contains("items")) {
+  if (targetClassList.contains("item")) {
     targetClassList.toggle("open");
     items.forEach(function (item) {
       if (item !== e.target) item.classList.remove("open");
@@ -33,4 +31,7 @@ document.body.addEventListener("click", function (e) {
     });
     return;
   }
+  items.forEach(function (item) {
+    item.classList.remove("open");
+  });
 });
