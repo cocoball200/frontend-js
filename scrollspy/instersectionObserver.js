@@ -5,7 +5,6 @@ const contentItems = Array.from(contentsElem.children);
 
 const scrollSpyObserver = new IntersectionObserver(
   (entries) => {
-    console.log(entries.find((entry) => entry.isIntersecting));
     const { target } = entries.find((entry) => entry.isIntersecting) || {};
     //비구조 할당을 이런식으로도 할 수 있음 ,
     //IntersectionObserverEntry에는 isIntersecting, target등 여러가지의 속성이 있는데, isIntersection이 true인 entry을 찾고, 여기서 target값을 가져오는 것!
